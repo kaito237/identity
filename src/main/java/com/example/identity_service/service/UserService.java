@@ -26,7 +26,7 @@ public class UserService {
 
     public User createUser(UserCreationRequest request){
 
-        if (userRepository.existByUsername(request.getUsername()))
+        if (userRepository.existsByUsername(request.getUsername()))
             throw new AppException(ErrorCode.USER_EXISTED); // kiem tra user co ton tai khong
 
 //        UserCreationRequest request1 = UserCreationRequest.builder()
